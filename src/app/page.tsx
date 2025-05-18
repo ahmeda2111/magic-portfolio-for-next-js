@@ -47,7 +47,7 @@ export default function Home() {
                 {about.avatar.display && (
                   <Avatar
                     style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
-                    src={person.avatar}
+                    src={"/images/projects/project-01/IMG.JPG"}
                     size="m"
                   />
                 )}
