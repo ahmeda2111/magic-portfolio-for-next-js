@@ -13,7 +13,7 @@ export function ProjectImageSwitcher({ images, alt }: Props) {
   const [index, setIndex] = useState(0);
 
   return (
-    <Flex direction="column" align="center" gap={3}>
+    <Flex direction="column" align="center" >
       {/* Image Wrapper */}
       <div
         style={{
@@ -38,7 +38,7 @@ export function ProjectImageSwitcher({ images, alt }: Props) {
       </div>
 
       {/* Line Switcher */}
-      <Flex gap={2} align="center" justify="center">
+      <Flex  align="center" >
 {images.length > 1 && images.map((_, i) => (
   <div
     key={i}

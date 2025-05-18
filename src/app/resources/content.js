@@ -363,13 +363,19 @@ const gallery = {
     },
   ],
 };
-const Projects = [
+export const Projects = [
   {
     category: "Flutter",
     projects: [
       {
         title: "E-Commerce App",
         description: "A full-featured e-commerce app with cart and checkout.",
+        link: "https://example.com/ecommerce",
+        content: "Built using Flutter and Firebase.",
+        team: [
+          { avatar: "/images/avatars/avatar-1.png" },
+          { avatar: "/images/avatars/avatar-2.png" },
+        ],
         images: [
           "/images/gallery/horizontal-1.jpg",
           "/images/gallery/horizontal-1.jpg",
@@ -378,6 +384,11 @@ const Projects = [
       {
         title: "Chat App",
         description: "Real-time chat using Firebase and Flutter.",
+        link: "https://example.com/chatapp",
+        content: "Supports group and private chats.",
+        team: [
+          { avatar: "/images/avatars/avatar-3.png" },
+        ],
         images: [
           "/images/gallery/horizontal-1.jpg",
         ],
@@ -390,6 +401,11 @@ const Projects = [
       {
         title: "Portfolio Website",
         description: "A dynamic portfolio site built with Next.js and Tailwind CSS.",
+        link: "https://example.com/portfolio",
+        content: "Showcasing personal projects and skills.",
+        team: [
+          { avatar: "/images/avatars/avatar-4.png" },
+        ],
         images: [
           "/images/gallery/horizontal-1.jpg",
         ],
@@ -402,6 +418,12 @@ const Projects = [
       {
         title: "Fitness Tracker",
         description: "Track workouts and progress using React Native.",
+        link: "https://example.com/fitness",
+        content: "Includes step counter and progress charts.",
+        team: [
+          { avatar: "/images/avatars/avatar-5.png" },
+          { avatar: "/images/avatars/avatar-6.png" },
+        ],
         images: [
           "/images/gallery/horizontal-1.jpg",
           "/images/gallery/vertical-3.jpg",
@@ -410,4 +432,5 @@ const Projects = [
     ],
   },
 ];
+
 export { person, social, newsletter, home, about, blog, work, gallery,Projects };
