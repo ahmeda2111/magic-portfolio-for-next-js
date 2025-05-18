@@ -2,7 +2,7 @@ import { Column } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import { about, person, work } from "@/app/resources/content";
 import { Meta, Schema } from "@/once-ui/modules";
-import { Projects } from "@/components/work/Projects";
+import { ProjectsByCategory } from "@/components/work/Projects";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -17,7 +17,9 @@ export async function generateMetadata() {
 export default function Work() {
   return (
     <Column maxWidth="m">
-      <Schema
+<ProjectsByCategory/>
+
+      {/* <Schema
         as="webPage"
         baseURL={baseURL}
         path={work.path}
@@ -29,8 +31,8 @@ export default function Work() {
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
-      />
-      <Projects />
+      /> */}
+      {/* <Projects /> */}
     </Column>
   );
 }
