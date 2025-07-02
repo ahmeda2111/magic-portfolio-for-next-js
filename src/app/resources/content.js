@@ -401,8 +401,16 @@ const Projects = [
         content: `An interactive tourism app built with Flutter, providing users with detailed maps, route planning, and discovery tools for attractions and points of interest. The app includes intuitive navigation and offline map access to enhance travel experiences.`,
         responsibilities: "Map interface, routing logic, and interactive screens.",
                         images: [
-
-          "/images/projects/sitebuilder/1.jpeg",
+        "/images/projects/tour-guide/1.jpeg",
+        "/images/projects/tour-guide/2.jpeg",
+"/images/projects/tour-guide/3.jpeg",
+"/images/projects/tour-guide/4.jpeg",
+"/images/projects/tour-guide/5.jpeg",
+"/images/projects/tour-guide/6.jpeg",
+"/images/projects/tour-guide/7.jpeg",
+"/images/projects/tour-guide/8.jpeg",
+"/images/projects/tour-guide/9.jpeg",
+"/images/projects/tour-guide/logo.jpeg",
 
         ],
                         team: [
@@ -438,9 +446,6 @@ const Projects = [
         responsibilities: "Implemented reusable layout blocks, integrated content editing features, and connected with shared drag-and-drop system.",
         link: "ukkera/main-next at staging",
                 images: [
-
-          "/images/projects/sitebuilder/1.jpeg",
-
         ],
                         team: [
           { avatar: "/images/avatars/avatar-1.png" },
@@ -454,15 +459,13 @@ const Projects = [
         responsibilities: "Built reusable file/folder views, integrated tree-based organization, and connected with shared drag-and-drop system.",
         link: "ukkera/main-next at feature/medialibrary",
                 images: [
-          "/images/projects/AQARAPP/logo.jpeg",
-          "/images/projects/AQARAPP/figma.png",
-          "/images/projects/AQARAPP/1.jpeg",
-          "/images/projects/AQARAPP/2.jpeg",
-          "/images/projects/AQARAPP/3.jpeg",
-          "/images/projects/AQARAPP/4.jpeg",
-          "/images/projects/AQARAPP/5.jpeg",
-          "/images/projects/AQARAPP/6.jpeg",
-          "/images/projects/AQARAPP/7.jpeg",
+
+          "/images/projects/mediadrive/1.jpeg",
+          "/images/projects/mediadrive/2.jpeg",
+          "/images/projects/mediadrive/3.jpeg",
+          "/images/projects/mediadrive/4.jpeg",
+          "/images/projects/mediadrive/5.jpeg",
+
         ],
                         team: [
           { avatar: "/images/avatars/avatar-1.png" },
@@ -537,9 +540,6 @@ const Projects = [
         responsibilities: "Feature development, debugging, and logic updates (no UI involvement).",
         link: "ukkera/cashier-system-admin",
                         images: [
-
-          "/images/projects/sitebuilder/1.jpeg",
-
         ],
                         team: [
           { avatar: "/images/avatars/avatar-1.png" },
@@ -553,9 +553,6 @@ const Projects = [
         responsibilities: "UI design, navigation flow, and mobile responsiveness.",
         link: "ukkera/WalletSystem",
                         images: [
-
-          "/images/projects/sitebuilder/1.jpeg",
-
         ],
                         team: [
           { avatar: "/images/avatars/avatar-1.png" },
@@ -593,7 +590,6 @@ const Projects = [
         link: "ukkera/queue_mobile",
                 images: [
 
-          "/images/projects/sitebuilder/1.jpeg",
 
         ],
                         team: [
@@ -624,7 +620,6 @@ const Projects = [
         link: "ukkera/reel-app",
                         images: [
 
-          "/images/projects/sitebuilder/1.jpeg",
 
         ],
                         team: [
