@@ -35,7 +35,7 @@ export default function ProjectsByCategoryPage() {
         <Column key={category.category}>
           <Text variant="heading-default-l">{category.category}</Text>
 
-          {category.projects.map((project, index) => (
+          {/* {category.projects.map((project, index) => (
             <Column
               key={index}
 
@@ -46,7 +46,7 @@ export default function ProjectsByCategoryPage() {
               <Text variant="body-default-m">{project.description}</Text>
               {project.images && project.images.length > 0 ? (<ProjectImageSwitcher images={project.images} alt={project.title}/>) : null}
             </Column>
-          ))}
+          ))} */}
         </Column>
       ))}
     </Column>
