@@ -387,7 +387,6 @@ const Projects = [
           "/images/projects/DIGITALCLINIC/7.jpeg",
           "/images/projects/DIGITALCLINIC/8.jpeg",
           "/images/projects/DIGITALCLINIC/9.jpeg",
-          "/images/projects/DIGITALCLINIC/1.jpeg",
         ],
                         team: [
           { avatar: "/images/avatars/avatar-1.png" },
@@ -410,7 +409,7 @@ const Projects = [
 "/images/projects/tour-guide/7.jpg",
 "/images/projects/tour-guide/8.jpg",
 "/images/projects/tour-guide/9.jpg",
-"/images/projects/tour-guide/logo.jpg",
+"/images/projects/tour-guide/logo.png",
 
         ],
                         team: [
