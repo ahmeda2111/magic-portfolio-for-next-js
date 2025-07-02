@@ -44,13 +44,7 @@ export default function ProjectsByCategoryPage() {
             >
               <Text variant="heading-default-m">{project.title}</Text>
               <Text variant="body-default-m">{project.description}</Text>
-              {project.images && project.images.length > 0 ? (
-  <ProjectImageSwitcher
-    images={project.images}
-    alt={project.title}
-  />
-) : null}
-
+              {project.images && project.images.length > 0 ? (<ProjectImageSwitcher images={project.images} alt={project.title}/>) : null}
             </Column>
           ))}
         </Column>
