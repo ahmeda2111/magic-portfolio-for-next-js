@@ -24,8 +24,7 @@ export function ProjectImageSwitcher({ images, alt }: Props) {
           borderRadius: "12px",
           backgroundColor: "#000",
         }}
-      >
-        <SmartImage
+      >{images && images.length > 0 ? (        <SmartImage
           key={images[index]} // forces fade animation
           src={images[index]}
           alt={alt}
@@ -34,7 +33,8 @@ export function ProjectImageSwitcher({ images, alt }: Props) {
             objectFit: "cover",
             transition: "opacity 0.5s ease-in-out",
           }}
-        />
+        />) : null}
+
       </div>
 
       {/* Line Switcher */}
