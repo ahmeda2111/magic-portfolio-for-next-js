@@ -16,6 +16,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   projectHref,
+  priority = false,
   images = [],
   title,
   content,
@@ -64,6 +65,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <img
             src={images[activeIndex]}
             alt={title}
+            loading={priority ? "eager" : "lazy"}
+            decoding="async"
             style={{
               position: "absolute",
               top: 0,
@@ -101,6 +104,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <img
                 src={img}
                 alt={`${title} thumbnail ${i + 1}`}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",
