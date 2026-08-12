@@ -1,4 +1,5 @@
-import { person, about, Projects } from "@/app/resources/content";
+import { person, about } from "@/app/resources/content";
+import { Projects } from "@/app/resources/projects.server";
 import { Column, Text } from "@/once-ui/components";
 import { ProjectCard } from "@/components";
 
