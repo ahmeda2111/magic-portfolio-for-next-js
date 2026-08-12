@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Google Maps Logo</title>
+  <rect width="256" height="256" rx="48" fill="#FFFFFF"/>
+  <g transform="translate(128 138)">
+    <path fill="#34A853" d="M0-88c0 49-44 88-44 88s44 39 44 88c0-49 44-88 44-88S0-39 0-88Z"/>
+    <circle cx="0" cy="-44" r="28" fill="#4285F4"/>
+    <circle cx="0" cy="-44" r="14" fill="#FFFFFF"/>
+    <path fill="#EA4335" d="M44 0c-24 0-44-20-44-44h44v44Z" opacity="0.9"/>
+    <path fill="#FBBC05" d="M-44 0c24 0 44-20 44-44H-44v44Z" opacity="0.9"/>
+  </g>
+</svg>

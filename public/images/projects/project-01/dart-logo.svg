@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Dart Logo</title>
+  <rect width="256" height="256" rx="48" fill="#FFFFFF"/>
+  <g transform="translate(48 56)">
+    <path fill="#0175C2" d="M0 0h112v112L56 168 0 112V0Z"/>
+    <path fill="#13B9FD" d="M56 56h56L56 112 0 56h56Z"/>
+    <path fill="#0175C2" d="M112 0v56l-28 28V28L84 0h28Z"/>
+  </g>
+</svg>
