@@ -3,7 +3,7 @@
 import { Flex, IconButton } from "@/once-ui/components";
 import { useEffect, useState } from "react";
 
-const THUMBNAILS_VISIBLE = 10;
+const THUMBNAILS_VISIBLE = 8;
 
 type Props = {
   images: string[];
@@ -93,6 +93,8 @@ export function ProjectThumbnailStrip({
               <img
                 src={img}
                 alt={`${title} thumbnail ${globalIndex + 1}`}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",

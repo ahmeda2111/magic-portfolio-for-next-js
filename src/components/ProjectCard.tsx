@@ -1,5 +1,6 @@
 "use client";
 
+import { ProjectThumbnailStrip } from "@/components/ProjectThumbnailStrip";
 import { Flex, Heading, SmartLink, Text } from "@/once-ui/components";
 import React, { useState } from "react";
 
@@ -25,7 +26,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   externalLink,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const hasImages = images.length > 0;
+  const validImages = images.filter(Boolean);
+  const hasImages = validImages.length > 0;
 
   return (
     <Flex
@@ -39,82 +41,52 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         boxSizing: "border-box",
       }}
     >
-      <div
-        style={{
-          position: "relative",
-          width: 1000,
-          maxWidth: "100%",
-          margin: "auto",
-          paddingTop: "56.25%",
-          overflow: "hidden",
-          borderRadius: "var(--radius-m)",
-          border: "1px solid var(--neutral-alpha-weak)",
-          backgroundColor: "#f0f0f0",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: hasImages && images.length > 1 ? "pointer" : "default",
-        }}
-        onClick={() => {
-          if (hasImages && images.length > 1) {
-            setActiveIndex((prev) => (prev + 1) % images.length);
-          }
-        }}
-      >
-        {hasImages ? (
-          <img
-            src={images[activeIndex]}
-            alt={title}
-            loading={priority ? "eager" : "lazy"}
-            decoding="async"
+      {hasImages && (
+        <>
+          <div
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
+              position: "relative",
+              width: 1000,
+              maxWidth: "100%",
+              margin: "auto",
+              paddingTop: "56.25%",
+              overflow: "hidden",
+              borderRadius: "var(--radius-m)",
+              border: "1px solid var(--neutral-alpha-weak)",
+              backgroundColor: "#f0f0f0",
+              cursor: validImages.length > 1 ? "pointer" : "default",
             }}
-          />
-        ) : (
-          <Text variant="body-default-m" onBackground="neutral-weak">
-            No preview image available
-          </Text>
-        )}
-      </div>
-
-      {hasImages && images.length > 1 && (
-        <Flex gap="4" paddingTop="8">
-          {images.map((img, i) => (
-            <div
-              key={i}
-              onClick={() => setActiveIndex(i)}
+            onClick={() => {
+              if (validImages.length > 1) {
+                setActiveIndex((prev) => (prev + 1) % validImages.length);
+              }
+            }}
+          >
+            <img
+              src={validImages[activeIndex]}
+              alt={title}
+              loading={priority ? "eager" : "lazy"}
+              decoding="async"
               style={{
-                border:
-                  activeIndex === i
-                    ? "2px solid var(--brand-solid-strong)"
-                    : "2px solid transparent",
-                borderRadius: "var(--radius-m)",
-                overflow: "hidden",
-                width: 80,
-                height: 80,
-                cursor: "pointer",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
               }}
-            >
-              <img
-                src={img}
-                alt={`${title} thumbnail ${i + 1}`}
-                loading="lazy"
-                decoding="async"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          ))}
-        </Flex>
+            />
+          </div>
+
+          {validImages.length > 1 && (
+            <ProjectThumbnailStrip
+              images={validImages}
+              activeIndex={activeIndex}
+              onSelect={setActiveIndex}
+              title={title}
+            />
+          )}
+        </>
       )}
 
       <Flex
