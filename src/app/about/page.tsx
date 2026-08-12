@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Badge,
   Button,
   Column,
   Flex,
@@ -190,8 +191,8 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                  <Column key={`${experience.company}-${index}`} fillWidth gap="m">
+                    <Flex fillWidth horizontal="space-between" vertical="end">
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
@@ -199,20 +200,49 @@ export default function About() {
                         {experience.timeframe}
                       </Text>
                     </Flex>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map((achievement: JSX.Element, index: number) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      ))}
-                    </Column>
+
+                    {experience.roles?.length > 0 && (
+                      <Column gap="8" fillWidth>
+                        <Text variant="heading-strong-s">Roles</Text>
+                        <Flex gap="8" wrap>
+                          {experience.roles.map((role) => (
+                            <Tag key={role} size="m">
+                              {role}
+                            </Tag>
+                          ))}
+                        </Flex>
+                      </Column>
+                    )}
+
+                    {experience.languages?.length > 0 && (
+                      <Column gap="8" fillWidth>
+                        <Text variant="heading-strong-s">Languages & Technologies</Text>
+                        <Flex gap="8" wrap>
+                          {experience.languages.map((language) => (
+                            <Badge key={language}>{language}</Badge>
+                          ))}
+                        </Flex>
+                      </Column>
+                    )}
+
+                    {experience.responsibilities?.length > 0 && (
+                      <Column gap="8" fillWidth>
+                        <Text variant="heading-strong-s">Responsibilities</Text>
+                        <Column as="ul" gap="12" paddingLeft="16">
+                          {experience.responsibilities.map(
+                            (responsibility: JSX.Element, responsibilityIndex: number) => (
+                              <Text
+                                as="li"
+                                variant="body-default-m"
+                                key={`${experience.company}-responsibility-${responsibilityIndex}`}
+                              >
+                                {responsibility}
+                              </Text>
+                            ),
+                          )}
+                        </Column>
+                      </Column>
+                    )}
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
                         {experience.images.map((image, index) => (

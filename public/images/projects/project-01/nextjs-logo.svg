@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Next.js Logo</title>
+  <rect width="256" height="256" rx="48" fill="#000000"/>
+  <g fill="#FFFFFF">
+    <path d="M168 168V88h-18.4l-32.8 56.8V88H98v80h18.4l32.8-56.8V168H168z"/>
+    <circle cx="186" cy="98" r="10"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Flutter Logo</title>
+  <rect width="256" height="256" rx="48" fill="#FFFFFF"/>
+  <g transform="translate(72 48)">
+    <path fill="#54C5F8" d="M14 0h56l42 42-56 56H14L0 84V42Z"/>
+    <path fill="#01579B" d="M14 98h56l42 42-56 56H14L0 182v-42Z"/>
+    <path fill="#29B6F6" d="M14 49h28l42 42-28 28H14L0 91V63Z"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Google Authentication Logo</title>
+  <rect width="256" height="256" rx="48" fill="#FFFFFF"/>
+  <g transform="translate(128 128)">
+    <path fill="#4285F4" d="M-10-34a44 44 0 0 1 62-30l-12 20a24 24 0 0 0-34 10H-10Z"/>
+    <path fill="#34A853" d="M52 10a44 44 0 0 1-4 18l-22-2a24 24 0 0 0 0-14l22-2Z"/>
+    <path fill="#FBBC05" d="M48 28a44 44 0 0 1-38 22l8-22a24 24 0 0 0 18-8l12 8Z"/>
+    <path fill="#EA4335" d="M10 50a44 44 0 0 1-20-38h24a24 24 0 0 0 10 14l-14 24Z"/>
+    <circle cx="0" cy="0" r="18" fill="#FFFFFF"/>
+    <path fill="#4285F4" d="M-2-8h16v6H-2v-6Zm0 10h10v6H-2v-6Z"/>
+  </g>
+</svg>

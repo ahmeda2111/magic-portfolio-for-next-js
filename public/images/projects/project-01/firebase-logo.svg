@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Firebase Logo</title>
+  <rect width="256" height="256" rx="48" fill="#FFFFFF"/>
+  <g transform="translate(128 138)">
+    <path fill="#FFCA28" d="M0-78L44-6 0 66-44-6Z"/>
+    <path fill="#FFA000" d="M0-78L44-6 22-6 0-40Z"/>
+    <path fill="#F57C00" d="M0 66L44-6 22-6 0 20Z"/>
+  </g>
+</svg>
