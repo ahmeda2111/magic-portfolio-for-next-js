@@ -15,7 +15,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -63,7 +63,7 @@ const home = {
   },
   subline: (
     <>
-      I'm Ahmed Ashraf, a Front End Developer specializing in React, Next.js, React Native, and Flutter.
+      I&apos;m Ahmed Ashraf, a Front End Developer specializing in React, Next.js, React Native, and Flutter.
       <br />
       I build scalable, responsive applications with clean architecture, reusable components, and intuitive user experiences.
     </>
@@ -94,7 +94,7 @@ const about = {
 
     description: (
       <>
-        I'm a Frontend Developer specializing in building modern web and mobile
+        I&apos;m a Frontend Developer specializing in building modern web and mobile
         applications using React, Next.js, React Native, and Flutter. I focus on
         creating responsive, scalable, and maintainable applications with clean
         architecture, reusable components, and intuitive user experiences.
@@ -102,12 +102,12 @@ const about = {
         <br />
         My experience includes developing real-world products across web and
         mobile platforms, working with APIs, maps, authentication, backend
-        integrations, and modular application architectures. I'm comfortable
+        integrations, and modular application architectures. I&apos;m comfortable
         working with JavaScript, TypeScript, Dart, and modern development tools,
         with a strong focus on performance, usability, and clean code.
         <br />
         <br />
-        I'm passionate about solving problems through technology, learning new
+        I&apos;m passionate about solving problems through technology, learning new
         tools and approaches, and contributing to collaborative teams where I
         can build impactful products and continuously grow as a developer.
       </>

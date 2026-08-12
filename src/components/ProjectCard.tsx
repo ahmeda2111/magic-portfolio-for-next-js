@@ -8,7 +8,7 @@ interface ProjectCardProps {
   priority?: boolean;
   images: string[];
   title: string;
-  content: string;
+  content?: string;
   description: string;
   avatars: { src: string }[];
   link: string;
