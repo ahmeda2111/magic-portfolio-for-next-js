@@ -2,6 +2,23 @@ import { getProjectImages } from "@/app/utils/getProjectImages";
 import { normalizeGithubUrl, projectTitleToSlug } from "@/app/utils/projectSlug";
 import { projectsConfig } from "@/app/resources/content";
 
+type RawProject = {
+  title: string;
+  description: string;
+  content?: string;
+  link?: string;
+  github?: string;
+  playStore?: string;
+  googleDrive?: string;
+  imageFolder?: string;
+  images?: string[];
+  tools?: string[];
+  languages?: string[];
+  team?: { avatar: string }[];
+  date?: string;
+  responsibilities?: string;
+};
+
 const categoryDefaults: Record<
   string,
   { languages: string[]; tools: string[] }
@@ -44,7 +61,7 @@ export type Project = {
 
 export const Projects = projectsConfig.map((category) => ({
   ...category,
-  projects: category.projects.map((project) => ({
+  projects: (category.projects as RawProject[]).map((project) => ({
     ...project,
     slug: projectTitleToSlug(project.title),
     images: project.imageFolder
