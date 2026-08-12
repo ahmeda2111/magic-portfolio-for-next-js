@@ -21,13 +21,12 @@ export function ProjectImageGallery({
   }
 
   return (
-    <Flex direction="column" gap="m" fillWidth>
+    <Flex direction="column" gap="m" fillWidth style={{ alignItems: "flex-start" }}>
       <div
         style={{
           position: "relative",
-          width: 1000,
+          width: "100%",
           maxWidth: "100%",
-          margin: "auto",
           paddingTop: "56.25%",
           overflow: "hidden",
           borderRadius: "var(--radius-m)",

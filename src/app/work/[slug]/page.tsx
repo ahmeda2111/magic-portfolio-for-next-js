@@ -79,7 +79,7 @@ function ContentProjectPage({ project }: { project: Project }) {
   const { github, playStore, googleDrive } = project.links;
 
   return (
-    <Column as="section" maxWidth="m" horizontal="center" gap="l">
+    <Column as="section" maxWidth="m" fillWidth gap="l" horizontal="start">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -97,7 +97,7 @@ function ContentProjectPage({ project }: { project: Project }) {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column maxWidth="xs" gap="16" fillWidth>
+      <Column gap="16" fillWidth>
         <Button
           data-border="rounded"
           href={work.path}
@@ -108,13 +108,11 @@ function ContentProjectPage({ project }: { project: Project }) {
         >
           Projects
         </Button>
-        <Heading variant="display-strong-s">{project.title}</Heading>
+        <Heading variant="display-strong-l">{project.title}</Heading>
         <Flex gap="12" wrap vertical="center">
-          {project.category && (
-            <Badge>{project.category}</Badge>
-          )}
+          {project.category && <Badge>{project.category}</Badge>}
           {project.date && (
-            <Text variant="body-default-s" onBackground="neutral-weak">
+            <Text variant="body-default-m" onBackground="neutral-weak">
               {project.date}
             </Text>
           )}
@@ -123,8 +121,8 @@ function ContentProjectPage({ project }: { project: Project }) {
 
       <ProjectImageGallery images={project.images} title={project.title} />
 
-      <Column gap="16" fillWidth maxWidth="xs">
-        <Text wrap="balance" variant="body-default-l" onBackground="neutral-weak">
+      <Column gap="24" fillWidth>
+        <Text wrap="balance" variant="heading-default-l" onBackground="neutral-weak">
           {project.description}
         </Text>
 
@@ -133,7 +131,7 @@ function ContentProjectPage({ project }: { project: Project }) {
             <Heading as="h2" variant="heading-strong-l">
               About this project
             </Heading>
-            <Text wrap="balance" variant="body-default-m">
+            <Text wrap="balance" variant="body-default-l">
               {project.content}
             </Text>
           </Column>
@@ -144,7 +142,7 @@ function ContentProjectPage({ project }: { project: Project }) {
             <Heading as="h2" variant="heading-strong-l">
               My responsibilities
             </Heading>
-            <Text wrap="balance" variant="body-default-m">
+            <Text wrap="balance" variant="body-default-l">
               {project.responsibilities}
             </Text>
           </Column>
