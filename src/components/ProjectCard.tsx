@@ -4,38 +4,47 @@ import { Flex, Heading, SmartLink, Text } from "@/once-ui/components";
 import React, { useState } from "react";
 
 interface ProjectCardProps {
-  href: string;
+  projectHref: string;
   priority?: boolean;
   images: string[];
   title: string;
   content?: string;
   description: string;
   avatars: { src: string }[];
-  link: string;
+  externalLink?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
-  href,
+  projectHref,
   images = [],
   title,
   content,
   description,
   avatars,
-  link,
+  externalLink,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const hasImages = images.length > 0;
 
   return (
-    <Flex direction="column" gap="m" fillWidth>
-      {/* Main Image or Placeholder */}
+    <Flex
+      direction="column"
+      gap="m"
+      fillWidth
+      padding="m"
+      radius="m"
+      style={{
+        border: "1px solid #ffffff",
+        boxSizing: "border-box",
+      }}
+    >
       <div
         style={{
           position: "relative",
           width: 1000,
           maxWidth: "100%",
           margin: "auto",
-          paddingTop: "56.25%", // 16:9 aspect ratio
+          paddingTop: "56.25%",
           overflow: "hidden",
           borderRadius: "var(--radius-m)",
           border: "1px solid var(--neutral-alpha-weak)",
@@ -71,7 +80,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
       </div>
 
-      {/* Thumbnails */}
       {hasImages && images.length > 1 && (
         <Flex gap="4" paddingTop="8">
           {images.map((img, i) => (
@@ -104,13 +112,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </Flex>
       )}
 
-      {/* Info Section */}
       <Flex
         mobileDirection="column"
         fillWidth
         paddingX="s"
         paddingTop="12"
-        paddingBottom="24"
+        paddingBottom="8"
         gap="l"
       >
         {title && (
@@ -132,22 +139,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               </Text>
             )}
             <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: 0, width: "fit-content" }}
-                  href={href}
-                >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-              {link && (
+              <SmartLink
+                suffixIcon="arrowRight"
+                style={{ margin: 0, width: "fit-content" }}
+                href={projectHref}
+              >
+                <Text variant="body-default-s">View project</Text>
+              </SmartLink>
+              {externalLink && (
                 <SmartLink
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: 0, width: "fit-content" }}
-                  href={link}
+                  href={externalLink}
                 >
-                  <Text variant="body-default-s">View project</Text>
+                  <Text variant="body-default-s">GitHub</Text>
                 </SmartLink>
               )}
             </Flex>

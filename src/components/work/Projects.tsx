@@ -1,16 +1,28 @@
-import { person, about } from "@/app/resources/content";
+import { work } from "@/app/resources/content";
 import { Projects } from "@/app/resources/projects.server";
 import { Column, Text } from "@/once-ui/components";
 import { ProjectCard } from "@/components";
 
 interface ProjectsProps {
-  range?: [number, number?]; // range للفئات
+  range?: [number, number?];
+  limit?: number;
 }
 
-export function ProjectsByCategory({ range }: ProjectsProps) {
-  const displayedCategories = range
+export function ProjectsByCategory({ range, limit }: ProjectsProps) {
+  let displayedCategories = range
     ? Projects.slice(range[0] - 1, range[1] ?? Projects.length)
     : Projects;
+
+  if (limit) {
+    let remaining = limit;
+    displayedCategories = displayedCategories
+      .map(({ category, projects }) => {
+        const sliced = projects.slice(0, remaining);
+        remaining -= sliced.length;
+        return { category, projects: sliced };
+      })
+      .filter(({ projects }) => projects.length > 0);
+  }
 
   return (
     <Column maxWidth="m" gap="xl" paddingY="xl">
@@ -20,15 +32,17 @@ export function ProjectsByCategory({ range }: ProjectsProps) {
 
           {projects.map((project, index) => (
             <ProjectCard
-              key={project.title}
+              key={project.slug}
               priority={index < 2}
-              href={project?.link || "#"}
-              images={project?.images}
-              title={project?.title}
-              description={project?.description}
-              content={project?.content}
-              avatars={project?.team?.map((member) => ({ src: member.avatar })) || []}
-              link={project?.link || ""}
+              projectHref={`${work.path}/${project.slug}`}
+              externalLink={project.links.github}
+              images={project.images}
+              title={project.title}
+              description={project.description}
+              content={project.content}
+              avatars={
+                project.team?.map((member) => ({ src: member.avatar })) || []
+              }
             />
           ))}
         </Column>

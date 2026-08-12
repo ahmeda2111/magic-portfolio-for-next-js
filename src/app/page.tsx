@@ -51,7 +51,7 @@ export default function Home() {
         </Column>
       </Column>
 
-<ProjectsByCategory range={[1, 2]} />
+<ProjectsByCategory limit={2} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
