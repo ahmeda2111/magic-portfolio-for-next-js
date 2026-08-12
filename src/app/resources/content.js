@@ -349,7 +349,7 @@ const Projects = [
     category: "Flutter",
     projects: [
       {
-        title: "AQAR App",
+        title: "AQARTY App",
         description: "Real estate platform for apartment listings and maintenance services.",
         link: "https://github.com/ahmeda2111/aqarapp",
         content: `A modern real estate mobile app built with Flutter, integrating Firebase for real-time data storage, authentication, and cloud functions. Users can browse apartment listings, view detailed property info with images, filter by location and price, and request maintenance services seamlessly. The app offers a smooth, responsive UI with state management for an optimized user experience across Android and iOS devices.`,
