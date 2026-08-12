@@ -15,7 +15,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -63,7 +63,7 @@ const home = {
   },
     subline: (
     <>
-      I'm Ahmed Ashraf, a Front End Developer passionate about crafting intuitive user experiences.
+      I&apos;m Ahmed Ashraf, a Front End Developer passionate about crafting intuitive user experiences.
       <br />
       I enjoy building projects that merge creativity and technology.    </>
   ),
