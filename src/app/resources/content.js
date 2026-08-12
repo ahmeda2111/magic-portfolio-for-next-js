@@ -344,7 +344,7 @@ const gallery = {
     },
   ],
 };
-const Projects = [
+const projectsConfig = [
   {
     category: "Flutter",
     projects: [
@@ -353,21 +353,8 @@ const Projects = [
         description: "Real estate platform for apartment listings and maintenance services.",
         link: "https://github.com/ahmeda2111/aqarapp",
         content: `A modern real estate mobile app built with Flutter, integrating Firebase for real-time data storage, authentication, and cloud functions. Users can browse apartment listings, view detailed property info with images, filter by location and price, and request maintenance services seamlessly. The app offers a smooth, responsive UI with state management for an optimized user experience across Android and iOS devices.`,
+        imageFolder: "/images/projects/AQARAPP",
         team: [{ avatar: "/images/avatars/avatar-1.png" }],
-        images: [
-          "/images/projects/AQARAPP/logo.jpeg",
-          "/images/projects/AQARAPP/figma.png",
-          "/images/projects/AQARAPP/1.jpeg",
-          "/images/projects/AQARAPP/2.jpeg",
-          "/images/projects/AQARAPP/3.jpeg",
-          "/images/projects/AQARAPP/4.jpeg",
-          "/images/projects/AQARAPP/5.jpeg",
-          "/images/projects/AQARAPP/6.jpeg",
-          "/images/projects/AQARAPP/7.jpeg",
-        ],
-                team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
         date: "09/2023–02/2024",
         responsibilities: "UI development, map integration, API connections, and user flow design.",
       },
@@ -376,21 +363,8 @@ const Projects = [
         description: "A digital health app for booking services and locating nearby providers.",
         link: "https://github.com/ahmeda2111/digital-clinic.git",
         content: `This Flutter app helps doctors and patients manage prescriptions, appointments, and healthcare bookings. Features include map-based provider search, real-time booking updates, and responsive UI design tailored for seamless interactions on mobile devices.`,
-        team: [{ avatar: "/images/avatars/avatar-3.png" }],
-        images: [
-          "/images/projects/DIGITALCLINIC/1.jpeg",
-          "/images/projects/DIGITALCLINIC/4.jpeg",
-          "/images/projects/DIGITALCLINIC/3.jpeg",
-          "/images/projects/DIGITALCLINIC/4.jpeg",
-          "/images/projects/DIGITALCLINIC/5.jpeg",
-          "/images/projects/DIGITALCLINIC/6.jpeg",
-          "/images/projects/DIGITALCLINIC/7.jpeg",
-          "/images/projects/DIGITALCLINIC/8.jpeg",
-          "/images/projects/DIGITALCLINIC/9.jpeg",
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/DIGITALCLINIC",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
         responsibilities: "UI design, map routing, and responsive content display.",
       },
       {
@@ -398,23 +372,9 @@ const Projects = [
         description: "A tourism guide app with maps, routes, and attraction discovery features.",
         link: "ukkera/WalletApp",
         content: `An interactive tourism app built with Flutter, providing users with detailed maps, route planning, and discovery tools for attractions and points of interest. The app includes intuitive navigation and offline map access to enhance travel experiences.`,
+        imageFolder: "/images/projects/tour-guide",
         responsibilities: "Map interface, routing logic, and interactive screens.",
-                        images: [
-        "/images/projects/tour-guide/1.jpg",
-        "/images/projects/tour-guide/2.jpg",
-"/images/projects/tour-guide/3.jpg",
-"/images/projects/tour-guide/4.jpg",
-"/images/projects/tour-guide/5.jpg",
-"/images/projects/tour-guide/6.jpg",
-"/images/projects/tour-guide/7.jpg",
-"/images/projects/tour-guide/8.jpg",
-"/images/projects/tour-guide/9.jpg",
-"/images/projects/tour-guide/logo.png",
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
     ],
   },
@@ -428,14 +388,8 @@ const Projects = [
         date: "04/2025–04/2025",
         responsibilities: "UI development, date filtering, layout customization, and module integration.",
         link: "ukkera/module-manager at calendar",
-                images: [
-          "/images/projects/calendar/1.jpeg",
-          "/images/projects/calendar/2.jpeg",
-          "/images/projects/calendar/3.jpeg",
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/calendar",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "Site Builder",
@@ -444,11 +398,8 @@ const Projects = [
         date: "01/2025–03/2025",
         responsibilities: "Implemented reusable layout blocks, integrated content editing features, and connected with shared drag-and-drop system.",
         link: "ukkera/main-next at staging",
-                images: [
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/sitebuilder",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "Folder Drive",
@@ -457,18 +408,8 @@ const Projects = [
         date: "02/2025–03/2025",
         responsibilities: "Built reusable file/folder views, integrated tree-based organization, and connected with shared drag-and-drop system.",
         link: "ukkera/main-next at feature/medialibrary",
-                images: [
-
-          "/images/projects/mediadrive/1.jpeg",
-          "/images/projects/mediadrive/2.jpeg",
-          "/images/projects/mediadrive/3.jpeg",
-          "/images/projects/mediadrive/4.jpeg",
-          "/images/projects/mediadrive/5.jpeg",
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/mediadrive",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "DnD Component System",
@@ -477,11 +418,7 @@ const Projects = [
         date: "01/2025–04/2025",
         responsibilities: "Engineered a modular component to support drag-and-drop of items between tree tables and containers. Integrated and customized it across several apps.",
         link: "ukkera/main-next at feature/dnd-input",
-                images: [
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "Page Builder",
@@ -490,16 +427,8 @@ const Projects = [
         date: "01/2025–03/2025",
         responsibilities: "Layout configuration, live content preview, integration with block system and shared drag-and-drop.",
         link: "ukkera/main-next at feature/page-builder",
-                images: [
-          "/images/projects/pagebuilder/1.jpeg",
-          "/images/projects/pagebuilder/2.jpeg",
-          "/images/projects/pagebuilder/3.jpeg",
-          "/images/projects/pagebuilder/4.jpeg",
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/pagebuilder",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "UQ (Queue Web)",
@@ -508,20 +437,9 @@ const Projects = [
         date: "08/2023–11/2024",
         responsibilities: "UI development, service module handling, layout design, and performance optimization.",
         link: "ukkera/queue_web",
-                images: [
-          "/images/projects/queuewep/1.jpeg",
-          "/images/projects/queuewep/2.jpeg",
-          "/images/projects/queuewep/3.jpeg",
-          "/images/projects/queuewep/4.jpeg",
-          "/images/projects/queuewep/5.jpeg",
-          "/images/projects/queuewep/6.jpeg",
-          "/images/projects/queuewep/7.jpeg",
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/queuewep",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
-
       {
         title: "Cashier System",
         description: "Transaction and inventory management app for retail environments.",
@@ -529,11 +447,7 @@ const Projects = [
         date: "09/2023–10/2023",
         responsibilities: "Feature development, debugging, and logic updates (no UI involvement).",
         link: "ukkera/cashier-system-admin",
-                        images: [
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "Wallet Web",
@@ -542,11 +456,7 @@ const Projects = [
         date: "05/2024–08/2024",
         responsibilities: "UI design, navigation flow, and mobile responsiveness.",
         link: "ukkera/WalletSystem",
-                        images: [
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "Wallet App",
@@ -554,37 +464,22 @@ const Projects = [
         content: `A React Next.js mobile app providing secure and fast peer-to-peer money transfer services. Developed reusable UI components and mobile-friendly design patterns to enhance usability.`,
         responsibilities: "UI layout, reusable components, mobile design patterns.",
         link: "ukkera/WalletApp",
-                images: [
-          "/images/projects/walletapp/1.jpeg",
-          "/images/projects/walletapp/2.jpeg",
-          "/images/projects/walletapp/3.jpeg",
-          "/images/projects/walletapp/4.jpeg",
-          "/images/projects/walletapp/5.jpeg",
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        imageFolder: "/images/projects/walletapp",
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
     ],
   },
   {
     category: "React Native",
     projects: [
-            {
+      {
         title: "UQ (Queue App)",
         description: "A mobile queue system to simplify service booking and employee interactions.",
         content: `A React Next.js mobile-focused queue management app that supports booking, employee interactions, and navigation flow optimization to improve service delivery and customer experience.`,
         date: "08/2023–12/2024",
         responsibilities: "UI design, feature implementation, navigation structure, and performance improvement.",
         link: "ukkera/queue_mobile",
-                images: [
-
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "HR-System App",
@@ -592,14 +487,7 @@ const Projects = [
         content: `A React Native HR management system designed to manage employee data, shifts, leave requests, and facilitate internal communications. Integrated service modules and resolved UI bugs for a smooth user experience.`,
         responsibilities: "UI development, service integration, navigation, and bug resolution.",
         link: "ukkera/hr-system at master",
-                images: [
-
-          "/images/projects/sitebuilder/1.jpeg",
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
       {
         title: "Reel App",
@@ -608,17 +496,11 @@ const Projects = [
         date: "09/2023–10/2023",
         responsibilities: "UI screens, map integration, bug fixes, and feature enhancements.",
         link: "ukkera/reel-app",
-                        images: [
-
-
-        ],
-                        team: [
-          { avatar: "/images/avatars/avatar-1.png" },
-        ],
+        team: [{ avatar: "/images/avatars/avatar-1.png" }],
       },
     ],
   },
 ];
 
 
-export { person, social, newsletter, home, about, blog, work, gallery,Projects };
+export { person, social, newsletter, home, about, blog, work, gallery, projectsConfig };

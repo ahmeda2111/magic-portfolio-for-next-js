@@ -1,6 +1,7 @@
 import { Column, Flex, Text } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
-import { person, about, Projects } from "@/app/resources/content";
+import { person, about } from "@/app/resources/content";
+import { Projects } from "@/app/resources/projects.server";
 import { Meta, Schema } from "@/once-ui/modules";
 import { ProjectImageSwitcher } from "./ProjectImageSwitcher";
 
