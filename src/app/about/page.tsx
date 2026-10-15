@@ -384,7 +384,7 @@ export default function About() {
             border="neutral-medium"
             background="surface"
             align="center"
-            justify="center"
+            horizontal="center"
           >
             <Text variant="body-strong-m">
               {skill}
