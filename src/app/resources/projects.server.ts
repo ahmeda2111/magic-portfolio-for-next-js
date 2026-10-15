@@ -59,7 +59,7 @@ export type Project = {
   imageFolder?: string;
   team?: { avatar: string }[];
   date?: string;
-  responsibilities?: string;
+  responsibilities?: string | string[];
   languages: string[];
   tools: string[];
   links: ProjectLinks;
