@@ -281,7 +281,7 @@ function ContentProjectPage({ project }: { project: Project }) {
                 </Text>
 
                 <Text variant="body-default-m" onBackground="neutral-weak">
-                  I do not distribute or claim ownership of the project's
+                  I do not distribute or claim ownership of the project&apos;s
                   proprietary source code or confidential company materials. My
                   intention is solely to describe my professional experience and
                   the nature of my development contributions.
@@ -334,7 +334,7 @@ function ContentProjectPage({ project }: { project: Project }) {
             </Text>
 
             <Text variant="body-default-m" onBackground="neutral-weak">
-              I do not distribute or claim ownership of the project's
+              I do not distribute or claim ownership of the project&apos;s
               proprietary source code or confidential company materials. My
               intention is solely to describe my professional experience and the
               nature of my development contributions.
