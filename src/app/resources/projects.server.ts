@@ -47,6 +47,7 @@ export type ProjectLinks = {
   github?: string;
   playStore?: string;
   googleDrive?: string;
+  website?: string;
 };
 
 export type Project = {
@@ -86,6 +87,14 @@ export const Projects = projectsConfig.map((category) => ({
       [],
     tools:
       project.tools ?? categoryDefaults[category.category]?.tools ?? [],
+    links: {
+      github: normalizeGithubUrl(
+        project.links?.github ?? project.github ?? project.link,
+      ),
+      playStore: project.links?.playStore ?? project.playStore,
+      googleDrive: project.links?.googleDrive ?? project.googleDrive,
+      website: project.links?.website,
+    },
   })),
 }));
 
