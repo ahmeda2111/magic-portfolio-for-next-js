@@ -10,13 +10,19 @@ type RawProject = {
   github?: string;
   playStore?: string;
   googleDrive?: string;
+  links?: {
+    github?: string;
+    playStore?: string;
+    googleDrive?: string;
+    website?: string;
+  };
   imageFolder?: string;
   images?: string[];
   tools?: string[];
   languages?: string[];
   team?: { avatar: string }[];
   date?: string;
-  responsibilities?: string;
+  responsibilities?: string | string[];
 };
 
 const categoryDefaults: Record<
@@ -67,13 +73,13 @@ export const Projects = projectsConfig.map((category) => ({
     images: project.imageFolder
       ? getProjectImages(project.imageFolder)
       : (project.images ?? []),
-    links: {
-      github:
-        normalizeGithubUrl(project.github ?? project.link) ??
-        undefined,
-      playStore: project.playStore?.trim() || undefined,
-      googleDrive: project.googleDrive?.trim() || undefined,
-    },
+    // links: {
+    //   github:
+    //     normalizeGithubUrl(project.github ?? project.link) ??
+    //     undefined,
+    //   playStore: project.playStore?.trim() || undefined,
+    //   googleDrive: project.googleDrive?.trim() || undefined,
+    // },
     languages:
       project.languages ??
       categoryDefaults[category.category]?.languages ??

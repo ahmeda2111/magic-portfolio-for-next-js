@@ -1,7 +1,7 @@
 import mdx from "@next/mdx";
 
 const withMDX = mdx({
-  extension: /\.mdx?$/,
+  extension: /.mdx?$/,
   options: {},
 });
 
@@ -12,6 +12,14 @@ const nextConfig = {
   sassOptions: {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.simpleicons.org",
+      },
+    ],
   },
 };
 

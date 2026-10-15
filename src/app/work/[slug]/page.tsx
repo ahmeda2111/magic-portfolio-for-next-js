@@ -76,7 +76,8 @@ export async function generateMetadata({
 }
 
 function ContentProjectPage({ project }: { project: Project }) {
-  const { github, playStore, googleDrive } = project.links;
+  const { github, playStore, googleDrive, website } = project.links;
+  console.log(project);
 
   return (
     <Column as="section" maxWidth="m" fillWidth gap="l" horizontal="start">
@@ -122,7 +123,11 @@ function ContentProjectPage({ project }: { project: Project }) {
       <ProjectImageGallery images={project.images} title={project.title} />
 
       <Column gap="24" fillWidth>
-        <Text wrap="balance" variant="heading-default-l" onBackground="neutral-weak">
+        <Text
+          wrap="balance"
+          variant="heading-default-l"
+          onBackground="neutral-weak"
+        >
           {project.description}
         </Text>
 
@@ -136,17 +141,31 @@ function ContentProjectPage({ project }: { project: Project }) {
             </Text>
           </Column>
         )}
+        {project.responsibilities &&
+          (Array.isArray(project.responsibilities)
+            ? project.responsibilities.length > 0
+            : typeof project.responsibilities === "string" &&
+              project.responsibilities.trim() !== "") && (
+            <Column gap="12" fillWidth>
+              <Heading as="h2" variant="heading-strong-l">
+                My responsibilities
+              </Heading>
 
-        {project.responsibilities?.trim() && (
-          <Column gap="12" fillWidth>
-            <Heading as="h2" variant="heading-strong-l">
-              My responsibilities
-            </Heading>
-            <Text wrap="balance" variant="body-default-l">
-              {project.responsibilities}
-            </Text>
-          </Column>
-        )}
+              {Array.isArray(project.responsibilities) ? (
+                <Column gap="8" fillWidth>
+                  {project.responsibilities.map((responsibility, index) => (
+                    <Text key={index} wrap="balance" variant="body-default-l">
+                      • {responsibility}
+                    </Text>
+                  ))}
+                </Column>
+              ) : (
+                <Text wrap="balance" variant="body-default-l">
+                  {project.responsibilities}
+                </Text>
+              )}
+            </Column>
+          )}
 
         {(project.languages.length > 0 || project.tools.length > 0) && (
           <Column gap="16" fillWidth>
@@ -178,31 +197,164 @@ function ContentProjectPage({ project }: { project: Project }) {
           </Column>
         )}
 
-        {(github || playStore || googleDrive) && (
-          <Column gap="12" fillWidth>
+        {github || website || googleDrive || playStore ? (
+          <>
+            <Column gap="12" fillWidth>
+              <Heading as="h2" variant="heading-strong-l">
+                Links
+              </Heading>
+
+              <Flex gap="12" wrap>
+                {github && (
+                  <SmartLink href={github} suffixIcon="arrowUpRightFromSquare">
+                    <Text variant="body-default-s">GitHub</Text>
+                  </SmartLink>
+                )}
+
+                {website && (
+                  <SmartLink href={website} suffixIcon="arrowUpRightFromSquare">
+                    <Text variant="body-default-s">Website</Text>
+                  </SmartLink>
+                )}
+
+                {Array.isArray(playStore)
+                  ? playStore.map((url, index) => (
+                      <SmartLink
+                        key={url}
+                        href={url}
+                        suffixIcon="arrowUpRightFromSquare"
+                      >
+                        <Text variant="body-default-s">
+                          {playStore.length > 1
+                            ? `Google Play ${index + 1}`
+                            : "Google Play"}
+                        </Text>
+                      </SmartLink>
+                    ))
+                  : playStore && (
+                      <SmartLink
+                        href={playStore}
+                        suffixIcon="arrowUpRightFromSquare"
+                      >
+                        <Text variant="body-default-s">Google Play</Text>
+                      </SmartLink>
+                    )}
+
+                {googleDrive && (
+                  <SmartLink
+                    href={googleDrive}
+                    suffixIcon="arrowUpRightFromSquare"
+                  >
+                    <Text variant="body-default-s">Google Drive</Text>
+                  </SmartLink>
+                )}
+              </Flex>
+            </Column>
+
+            {!github && !website && !googleDrive && playStore && (
+              <Column
+                fillWidth
+                padding="24"
+                gap="16"
+                radius="l"
+                border="neutral-medium"
+                background="surface"
+              >
+                <Heading as="h2" variant="heading-strong-l">
+                  Professional Contribution & Intellectual Property Disclaimer
+                </Heading>
+
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  This portfolio entry is provided solely to document my
+                  professional experience and describe my personal contributions
+                  to the development of the project during my previous
+                  employment.
+                </Text>
+
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  Any images or visual materials included are presented for
+                  illustrative and portfolio documentation purposes only. Their
+                  inclusion does not imply ownership of, or any claim to, the
+                  underlying software, source code, trademarks, or other
+                  intellectual property, all of which belong to their respective
+                  rights holders.
+                </Text>
+
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  I do not distribute or claim ownership of the project's
+                  proprietary source code or confidential company materials. My
+                  intention is solely to describe my professional experience and
+                  the nature of my development contributions.
+                </Text>
+
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  I make no claim of affiliation with, endorsement by, or
+                  current representation of the company. Any third-party rights
+                  remain with their respective owners.
+                </Text>
+
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  This portfolio entry is not intended to infringe intellectual
+                  property rights, disclose confidential information, or
+                  misrepresent ownership of any materials.
+                </Text>
+
+                <Button disabled variant="secondary" weight="default" size="m">
+                  Project Contribution — Source Code Not Available
+                </Button>
+              </Column>
+            )}
+          </>
+        ) : (
+          <Column
+            fillWidth
+            padding="24"
+            gap="16"
+            radius="l"
+            border="neutral-medium"
+            background="surface"
+          >
             <Heading as="h2" variant="heading-strong-l">
-              Links
+              Professional Contribution & Intellectual Property Disclaimer
             </Heading>
-            <Flex gap="12" wrap>
-              {github && (
-                <SmartLink href={github} suffixIcon="arrowUpRightFromSquare">
-                  <Text variant="body-default-s">GitHub</Text>
-                </SmartLink>
-              )}
-              {playStore && (
-                <SmartLink href={playStore} suffixIcon="arrowUpRightFromSquare">
-                  <Text variant="body-default-s">Play Store</Text>
-                </SmartLink>
-              )}
-              {googleDrive && (
-                <SmartLink
-                  href={googleDrive}
-                  suffixIcon="arrowUpRightFromSquare"
-                >
-                  <Text variant="body-default-s">Google Drive</Text>
-                </SmartLink>
-              )}
-            </Flex>
+
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              This portfolio entry is provided solely to document my
+              professional experience and describe my personal contributions to
+              the development of the project during my previous employment.
+            </Text>
+
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              Any images or visual materials included are presented for
+              illustrative and portfolio documentation purposes only. Their
+              inclusion does not imply ownership of, or any claim to, the
+              underlying software, source code, trademarks, or other
+              intellectual property, all of which belong to their respective
+              rights holders.
+            </Text>
+
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              I do not distribute or claim ownership of the project's
+              proprietary source code or confidential company materials. My
+              intention is solely to describe my professional experience and the
+              nature of my development contributions.
+            </Text>
+
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              I make no claim of affiliation with, endorsement by, or current
+              representation of the company. Any third-party rights remain with
+              their respective owners.
+            </Text>
+
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              This portfolio entry is not intended to infringe intellectual
+              property rights, disclose confidential information, or
+              misrepresent ownership of any materials.
+            </Text>
+
+            <Button disabled variant="secondary" weight="default" size="m">
+              Project Contribution — Source Code Not Available
+            </Button>
           </Column>
         )}
       </Column>
