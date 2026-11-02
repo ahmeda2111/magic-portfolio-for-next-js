@@ -1151,48 +1151,48 @@ The applications and their proprietary source code belong to their respective ri
         tools: ["React Native", "JavaScript"],
         languages: ["JavaScript"],
       },
-      {
-        title: "Reel App",
-        description:
-          "A short-form video and photo sharing mobile application. My contribution was limited to fixing a small number of bugs in the existing application.",
-        links: {
-          playStore: [
-            "https://play.google.com/store/apps/details?id=com.topreels.app",
-          ],
-        },
-        content: `## Overview
+//       {
+//         title: "Reel App",
+//         description:
+//           "A short-form video and photo sharing mobile application. My contribution was limited to fixing a small number of bugs in the existing application.",
+//         links: {
+//           playStore: [
+//             "https://play.google.com/store/apps/details?id=com.topreels.app",
+//           ],
+//         },
+//         content: `## Overview
 
-Reel App is a social-style mobile application focused on browsing short-form video and photo content.
+// Reel App is a social-style mobile application focused on browsing short-form video and photo content.
 
-## Application Context
+// ## Application Context
 
-The product provides a feed-oriented experience for discovering visual content. Its existing mobile interface supports browsing and interacting with content.
+// The product provides a feed-oriented experience for discovering visual content. Its existing mobile interface supports browsing and interacting with content.
 
-## My Contribution
+// ## My Contribution
 
-My involvement was limited to a small number of bug fixes in the existing application. I did not build the application from scratch or claim responsibility for its overall development.
+// My involvement was limited to a small number of bug fixes in the existing application. I did not build the application from scratch or claim responsibility for its overall development.
 
-## Work Performed
+// ## Work Performed
 
-- Investigated selected application issues.
-- Fixed a small number of bugs.
-- Checked the behavior of the affected areas after the fixes.
+// - Investigated selected application issues.
+// - Fixed a small number of bugs.
+// - Checked the behavior of the affected areas after the fixes.
 
-## Intellectual Property Notice
+// ## Intellectual Property Notice
 
-The application and its proprietary source code belong to their respective rights holders. The public store listing is provided for reference and does not imply ownership of the application or its intellectual property.`,
-        date: "09/2023–10/2023",
-        responsibilities: [
-          "Fixed a small number of bugs in the existing mobile application.",
-          "Investigated specific issues in the areas assigned to me.",
-          "Applied targeted fixes to the affected functionality.",
-          "Checked the affected flows after making changes.",
-        ],
-        imageFolder: "/images/projects/reelapp",
-        team: [{ avatar: "/images/avatars/avatar-1.png" }],
-        tools: ["React Native", "JavaScript"],
-        languages: ["JavaScript"],
-      },
+// The application and its proprietary source code belong to their respective rights holders. The public store listing is provided for reference and does not imply ownership of the application or its intellectual property.`,
+//         date: "09/2023–10/2023",
+//         responsibilities: [
+//           "Fixed a small number of bugs in the existing mobile application.",
+//           "Investigated specific issues in the areas assigned to me.",
+//           "Applied targeted fixes to the affected functionality.",
+//           "Checked the affected flows after making changes.",
+//         ],
+//         imageFolder: "/images/projects/reelapp",
+//         team: [{ avatar: "/images/avatars/avatar-1.png" }],
+//         tools: ["React Native", "JavaScript"],
+//         languages: ["JavaScript"],
+//       },
     ],
   },
 ];
